@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Broke Bot — Phase‑1 (TRON Rail) 25+ Coin Playbook</title>
+<style>
+  :root {
+    --bg:#070712; --panel:#0e0e22; --panel2:#0a0a19;
+    --txt:#e9e7ff; --muted:#b5b0e6; --accent:#b54bff; --accent2:#48f0c6; --warn:#ff5c7a;
+    --line:rgba(181,75,255,.25);
+  }
+  html,body{background:radial-gradient(1200px 800px at 30% 0%, rgba(181,75,255,.18), transparent 55%),
+                        radial-gradient(900px 700px at 80% 20%, rgba(72,240,198,.12), transparent 60%),
+                        var(--bg);
+            color:var(--txt); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;}
+  .wrap{max-width:980px;margin:28px auto;padding:0 18px 60px;}
+  .hero{border:1px solid var(--line); background:linear-gradient(180deg, rgba(181,75,255,.12), rgba(14,14,34,.85));
+        border-radius:20px;padding:22px 22px 18px; box-shadow: 0 14px 40px rgba(0,0,0,.35);}
+  .kicker{color:var(--accent2);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px;}
+  h1{margin:8px 0 6px;font-size:34px;line-height:1.15;}
+  .sub{color:var(--muted);margin:0 0 12px;}
+  .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .pill{border:1px solid var(--line);background:rgba(10,10,25,.6);padding:6px 10px;border-radius:999px;
+        color:var(--muted);font-size:12px}
+  .grid{display:grid;grid-template-columns: 1.2fr .8fr; gap:14px;margin-top:14px}
+  .card{border:1px solid var(--line);background:linear-gradient(180deg, rgba(10,10,25,.85), rgba(14,14,34,.65));
+        border-radius:18px;padding:16px;}
+  h2{margin:18px 0 10px;font-size:22px}
+  h3{margin:14px 0 8px;font-size:16px;color:var(--accent2)}
+  p,li{color:var(--muted);line-height:1.55}
+  code{background:rgba(181,75,255,.12);border:1px solid var(--line);padding:2px 6px;border-radius:8px;color:var(--txt)}
+  .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
+  .callout{border-left:4px solid var(--accent); padding:12px 12px 12px 14px; background:rgba(181,75,255,.08);
+           border-radius:14px; margin:12px 0;}
+  .warn{border-left-color:var(--warn); background:rgba(255,92,122,.08)}
+  table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:14px;border:1px solid var(--line);}
+  th,td{padding:10px 10px;border-bottom:1px solid rgba(181,75,255,.14);}
+  th{text-align:left;color:var(--txt);background:rgba(181,75,255,.10)}
+  tr:last-child td{border-bottom:none}
+  .footer{margin-top:26px;color:rgba(233,231,255,.65);font-size:12px}
+  .hr{height:1px;background:rgba(181,75,255,.18);margin:18px 0}
+  .tag{color:var(--txt)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="kicker">Broke Bot • Phase‑1 Copy (Doman.ai Logic) • TRON Rail</div>
+    <h1>25+ Coin Funding‑Event Engine (No API Keys Required)</h1>
+    <p class="sub">
+      Phase‑1 mirrors Doman.ai’s “many small, net‑positive executions” — but for funding‑rate capture across 25+ coins,
+      using wallet-based access and public on-chain/read endpoints.
+    </p>
+    <div class="pillrow">
+      <span class="pill">Minimum bucket: <span class="tag">$5+</span></span>
+      <span class="pill">Leverage: <span class="tag">2×–5× isolated</span></span>
+      <span class="pill">Scaling: <span class="tag">more coins + more events</span></span>
+      <span class="pill">Goal: <span class="tag">double→triple monthly (aspirational)</span></span>
+      <span class="pill">Date: <span class="tag">2025-12-30</span></span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>What “Phase‑1” means (plain English)</h2>
+      <ul>
+        <li><b>Only take trades that are net‑positive after all costs.</b> If fees/spread/slippage erase the edge, skip.</li>
+        <li><b>Win by repetition, not prediction.</b> Lots of tiny wins across many instruments.</li>
+        <li><b>Keep risk survivable.</b> Small buckets, isolated margin, hard daily stop rules.</li>
+      </ul>
+      <div class="callout">
+        <b>Important:</b> “Double→triple monthly” is <b>not guaranteed</b>.
+        It requires frequent funding extremes, low execution costs, and strict risk caps so a few spikes don’t erase weeks of capture.
+      </div>
+    </div>
+    <div class="card">
+      <h2>Edge Type</h2>
+      <p>
+        Broke Bot Phase‑1 is a <b>funding-event engine</b>: open a delta‑neutral position near funding time only when
+        the <b>capturable edge</b> is large enough to beat all costs.
+      </p>
+      <div class="hr"></div>
+      <p class="mono">
+        Net per event ≈ Notional × |FundingRateCaptured| − (Fees + Spread + Slippage + SafetyBuffer)
+      </p>
+      <p>Scaling happens by increasing <b>qualified events</b> (more coins × more platforms), not by pushing leverage.</p>
+    </div>
+  </div>
+
+  <h2>No API keys: multi‑platform data + wallet execution</h2>
+  <div class="card">
+    <h3>Public read sources (no keys)</h3>
+    <ul>
+      <li><b>On‑chain contracts</b>: read funding, OI, and prices via public RPC.</li>
+      <li><b>Protocol public “info” endpoints</b>: often keyless for reads but rate-limited.</li>
+      <li><b>Indexer endpoints</b>: some ecosystems publish read-only HTTP endpoints.</li>
+    </ul>
+    <h3>Execution (no exchange API keys)</h3>
+    <ul>
+      <li>Trades signed by a user wallet (MetaMask / WalletConnect style flows).</li>
+      <li>Bot submits transactions through RPC (paid RPC recommended later for stability).</li>
+      <li><b>TRON rail</b>: USDT‑TRC20 transfers can move capital cheaply between venues.</li>
+    </ul>
+    <div class="callout warn">
+      <b>Reality check:</b> “No API keys” ≠ “no limits.”
+      Public endpoints can rate-limit, RPC can fail, and some venues require accounts/KYC.
+      Plan for caching + fallback providers.
+    </div>
+  </div>
+
+  <h2>Phase‑1 Micro‑Buckets ($5+)</h2>
+  <div class="card">
+    <p>Use many tiny <b>buckets</b> so you can cover 25+ coins even with small starting capital.</p>
+    <table>
+      <thead><tr><th>Bucket</th><th>Margin</th><th>Leverage</th><th>Notional</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>$5</td><td>3×</td><td>$15</td><td>Proof-of-edge / learning mode</td></tr>
+        <tr><td>B</td><td>$10</td><td>3×</td><td>$30</td><td>Baseline production</td></tr>
+        <tr><td>C</td><td>$25</td><td>2×–3×</td><td>$50–$75</td><td>Scaled production (after stability)</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">
+      <b>Promotion rule:</b> only increase bucket size after <b>30+ consecutive events</b> with positive net capture and zero liquidation/forced exits.
+    </div>
+  </div>
+
+  <h2>Qualification gates (prove it works first)</h2>
+  <div class="card">
+    <h3>Gate 1 — Paper Mode (minimum 24 hours)</h3>
+    <ul>
+      <li>Run event selection without placing trades for 24h.</li>
+      <li>Must record at least <b>1 positive net event</b> with realistic fee/spread estimation.</li>
+    </ul>
+    <h3>Gate 2 — Small Live Mode</h3>
+    <ul>
+      <li>Start with Bucket A ($5) across ~5 coins on 1 platform.</li>
+      <li>Daily loss caps: stop after 2 failed exits or after -10% of Phase‑1 bankroll.</li>
+    </ul>
+    <h3>Gate 3 — Expansion to 25+ coins & multi‑platform</h3>
+    <ul>
+      <li>Add coins only if they meet liquidity/spread/volatility limits.</li>
+      <li>Expand platforms only when monitoring + execution is stable.</li>
+    </ul>
+  </div>
+
+  <h2>How to chase “double→triple monthly” (aspirational plan)</h2>
+  <div class="card">
+    <p>Three levers — in this order:</p>
+    <ol>
+      <li><b>Increase qualified event count</b> (25+ coins × multiple platforms).</li>
+      <li><b>Increase capture quality</b> (filters + execution → lower slippage and fewer spike losses).</li>
+      <li><b>Increase bucket count</b> (parallelism) — not leverage.</li>
+    </ol>
+
+    <h3>Projection model (use ranges)</h3>
+    <p class="mono">
+      Events/month ≈ Coins × Platforms × QualifyingWindowsPerCoinPerMonth<br/>
+      Net/month ≈ Events/month × AvgNetPerEvent<br/>
+      AvgNetPerEvent ≈ (Notional × CapturedFundingRate) − AllCosts
+    </p>
+
+    <table>
+      <thead><tr><th>Scenario</th><th>Coins</th><th>Platforms</th><th>Qualifying windows / coin / month</th><th>Events / month</th></tr></thead>
+      <tbody>
+        <tr><td>Conservative</td><td>25</td><td>2</td><td>2</td><td>100</td></tr>
+        <tr><td>Base</td><td>25</td><td>3</td><td>3</td><td>225</td></tr>
+        <tr><td>Aggressive</td><td>25</td><td>4</td><td>4</td><td>400</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout warn">
+      <b>Why it’s hard:</b> AvgNetPerEvent must stay high while scaling.
+      Costs and liquidation risk often rise faster than event quality.
+    </div>
+  </div>
+
+  <h2>Phase‑1 signal selection</h2>
+  <div class="card">
+    <ul>
+      <li>Funding extreme above threshold AND stable (not whipping violently).</li>
+      <li>Spread below max, adequate depth, and volatility compression into funding time.</li>
+      <li>Arm intent 10–90 minutes before funding; cancel if any filter fails.</li>
+      <li>Enter delta‑neutral hedge; hold through snapshot; exit immediately after.</li>
+    </ul>
+  </div>
+
+  <h2>Risk controls (survivability)</h2>
+  <div class="card">
+    <ul>
+      <li><b>Isolated margin only</b>.</li>
+      <li><b>Per-coin max exposure</b> (e.g., 5% of Phase‑1 bankroll).</li>
+      <li><b>Daily stops</b>: stop after 2 bad exits or -10% bankroll on the day.</li>
+      <li><b>Kill switch</b> if RPC/quotes stale.</li>
+      <li><b>Emergency unwind</b> on volatility spikes; log incident.</li>
+    </ul>
+  </div>
+
+  <h2>Implementation roadmap</h2>
+  <div class="card">
+    <h3>A — Universe + adapters</h3>
+    <ul>
+      <li>25+ coin universe with liquidity ranking + min notional per coin.</li>
+      <li>Per-platform adapters: read funding/spread/depth; open/close via wallet signing.</li>
+    </ul>
+    <h3>B — Event scanner</h3>
+    <ul>
+      <li>Compute “capturable edge” per coin per platform; emit <span class="mono">IntentArmed</span> only when all filters pass.</li>
+    </ul>
+    <h3>C — Execution engine</h3>
+    <ul>
+      <li>Maintain a limited number of parallel slots/buckets to prevent overtrading.</li>
+      <li>Retries + safe cancellation logic.</li>
+    </ul>
+    <h3>D — Proof dashboard</h3>
+    <ul>
+      <li>Per-event PnL, fees, slippage, skip reasons, and gate checks.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <div class="hr"></div>
+    <b>Disclaimer:</b> Educational/software design only. Trading is risky; funding can flip; liquidations/outages can happen.
+    Nothing here is financial advice or a guarantee of profit.
+  </div>
+</div>
+</body>
+</html>

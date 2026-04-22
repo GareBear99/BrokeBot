@@ -11,6 +11,14 @@ description: TRON Funding-Rate Arbitrage (CEX, Python) — part of the ARC Tradi
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/GareBear99/BrokeBot/blob/main/LICENSE)
 [![Built on ARC-Core](https://img.shields.io/badge/built%20on-ARC--Core-5B6CFF)](https://github.com/GareBear99/ARC-Core)
 
+## 📖 Official docs
+
+[![Open the official docs](https://img.shields.io/badge/%F0%9F%93%96%20Open%20Official%20Docs-25--Coin%20Playbook%20v2-0366d6?style=for-the-badge)](./official/BrokeBot_Phase1_25Coin_Playbook_v2.html)
+
+[![Playbook v2 PDF](https://img.shields.io/badge/%F0%9F%93%84%20Playbook%20v2-PDF-grey?style=for-the-badge)](./official/BrokeBot_Phase1_25Coin_Playbook_v2.pdf) [![TRON Funding Spec](https://img.shields.io/badge/%F0%9F%93%96%20TRON%20Funding%20Spec-PDF-grey?style=for-the-badge)](./official/TRON_Funding_Arbitrage_Bot_Spec.pdf)
+
+Live URL of the primary doc: `https://garebear99.github.io/BrokeBot/official/BrokeBot_Phase1_25Coin_Playbook_v2.html`
+
 ## What this is
 
 BrokeBot is part of the **ARC Trading Fleet** — six public repositories that share a
