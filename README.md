@@ -41,6 +41,15 @@ its decisions into an **ARC-Core** event spine for tamper-evident trade audit.
 
 ---
 
+<!-- ARC-Official-Docs-Link-Marker -->
+## 📖 Official docs
+
+[**Open the rendered official docs → https://garebear99.github.io/BrokeBot/official/BrokeBot_Phase1_25Coin_Playbook_v2.html**](https://garebear99.github.io/BrokeBot/official/BrokeBot_Phase1_25Coin_Playbook_v2.html)
+
+Also available under [`docs/official/`](https://github.com/GareBear99/BrokeBot/tree/main/docs/official) in-tree, and through the Pages landing at [https://garebear99.github.io/BrokeBot/](https://garebear99.github.io/BrokeBot/).
+
+
+
 # Broke Bot - TRON Funding Rate Arbitrage
 
 **Educational funding-rate arbitrage bot** that captures perpetual futures funding payments when rates become extreme, while keeping price risk tightly controlled via filters, stops, and kill-switches.
