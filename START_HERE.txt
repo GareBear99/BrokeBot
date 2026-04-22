@@ -1,0 +1,185 @@
+================================================================================
+  🤖 BROKE BOT - TRON FUNDING RATE ARBITRAGE BOT
+  Getting Started Guide
+================================================================================
+
+📍 YOU ARE HERE: /Users/TheRustySpoon/Desktop/Projects/Main projects/broke_bot
+
+⚡ QUICK START (3 STEPS)
+────────────────────────────────────────────────────────────────────────────
+
+1. INSTALL DEPENDENCIES
+   $ pip install -r requirements.txt
+
+2. TEST INSTALLATION
+   $ python3 test_install.py
+
+3. RUN BOT (PAPER TRADING MODE - SAFE!)
+   $ ./broke_bot_start.sh
+   
+   OR
+   
+   $ python3 run.py
+
+That's it! The bot will start in paper trading mode (no real money).
+
+────────────────────────────────────────────────────────────────────────────
+
+📖 DOCUMENTATION
+────────────────────────────────────────────────────────────────────────────
+
+📘 README_MAIN.md            ← START HERE (main overview)
+📗 BROKE_BOT_QUICKSTART.md   ← Quick 3-minute guide
+📕 README.md                 ← Full detailed documentation
+📙 PROJECT_STRUCTURE.md      ← Technical architecture
+📄 TRON_Funding_Arbitrage_Bot_Spec.pdf  ← Original specification
+
+────────────────────────────────────────────────────────────────────────────
+
+🎯 WHAT THIS BOT DOES
+────────────────────────────────────────────────────────────────────────────
+
+1. Monitors funding rates on perpetual futures (BTCUSDT, ETHUSDT)
+2. Opens positions when funding becomes extreme (≥0.08%)
+3. Collects funding payments (every 8 hours)
+4. Exits after receiving payment
+5. Manages risk with stops and multiple safety controls
+
+Position Direction:
+  • Funding POSITIVE → Bot opens SHORT (to receive payment from longs)
+  • Funding NEGATIVE → Bot opens LONG (to receive payment from shorts)
+
+────────────────────────────────────────────────────────────────────────────
+
+⚙️ CONFIGURATION
+────────────────────────────────────────────────────────────────────────────
+
+For default settings, just run the bot. It will use:
+  • Exchange: Binance Futures
+  • Symbol: BTCUSDT
+  • Leverage: 3x
+  • Mode: DRY RUN (paper trading)
+
+To customize:
+  1. Copy: cp .env.broke_bot.example .env
+  2. Edit: nano .env (or your favorite editor)
+  3. Run: ./broke_bot_start.sh
+
+────────────────────────────────────────────────────────────────────────────
+
+📊 VIEW LOGS
+────────────────────────────────────────────────────────────────────────────
+
+Logs are in JSONL format (one JSON per line):
+
+  $ tail -f logs/broke_bot_YYYY-MM-DD.jsonl
+
+Pretty print (requires jq):
+
+  $ tail -f logs/broke_bot_YYYY-MM-DD.jsonl | jq '.'
+
+────────────────────────────────────────────────────────────────────────────
+
+⚠️  IMPORTANT WARNINGS
+────────────────────────────────────────────────────────────────────────────
+
+🚨 ALWAYS START IN PAPER TRADING MODE (DRY_RUN=true)
+🚨 TEST FOR 50+ FUNDING CYCLES BEFORE CONSIDERING LIVE
+🚨 ONLY TRADE WITH MONEY YOU CAN AFFORD TO LOSE
+🚨 USE API KEYS WITH TRADE-ONLY PERMISSIONS (NO WITHDRAWALS)
+🚨 ENABLE IP WHITELISTING ON EXCHANGE
+🚨 START WITH 2X LEVERAGE WHEN GOING LIVE
+
+────────────────────────────────────────────────────────────────────────────
+
+🛠️  TROUBLESHOOTING
+────────────────────────────────────────────────────────────────────────────
+
+Bot won't start?
+  → Run: python3 test_install.py
+  → Install: pip install -r requirements.txt
+
+No trades happening?
+  → This is NORMAL. Bot waits for extreme funding rates (>0.08%)
+  → Check logs for decision reasons
+  → Funding extremes may be rare
+
+Module import errors?
+  → Make sure you're in the broke_bot directory
+  → Check Python version: python3 --version (need 3.8+)
+
+────────────────────────────────────────────────────────────────────────────
+
+📁 PROJECT FILES
+────────────────────────────────────────────────────────────────────────────
+
+Core Modules:
+  run.py                 - Entry point
+  bot.py                 - Main event loop
+  config.py              - Configuration
+  exchange_adapter.py    - Exchange APIs
+  data_fetcher.py        - Market data
+  signal_generator.py    - Entry signals
+  risk_manager.py        - Risk controls
+  position_manager.py    - Order execution
+  indicators.py          - Technical indicators
+  logger.py              - Logging
+
+Support Files:
+  broke_bot_start.sh     - Startup script
+  test_install.py        - Installation test
+  requirements.txt       - Dependencies
+  .env.broke_bot.example - Config template
+
+────────────────────────────────────────────────────────────────────────────
+
+💡 TIPS
+────────────────────────────────────────────────────────────────────────────
+
+1. ALWAYS paper trade first
+2. Review logs to understand bot behavior
+3. Funding events happen every 8 hours (check your exchange)
+4. Bot may not trade for days if funding isn't extreme
+5. This is a PATIENT strategy, not high-frequency
+6. Start with 2x leverage when going live
+7. Keep a TRX balance for USDT-TRC20 fees
+
+────────────────────────────────────────────────────────────────────────────
+
+🎓 STRATEGY OVERVIEW
+────────────────────────────────────────────────────────────────────────────
+
+Funding Rate Arbitrage:
+  • Perpetual futures have 8-hour funding payments
+  • When funding is extreme, one side pays the other
+  • Bot positions to receive the payment
+  • Price risk is managed with stops and filters
+  • Hold time: ~8 hours per trade
+  • Expected: 0-4 trades per day
+
+────────────────────────────────────────────────────────────────────────────
+
+🆘 NEED HELP?
+────────────────────────────────────────────────────────────────────────────
+
+1. Check logs in logs/ directory
+2. Read README_MAIN.md
+3. Review configuration
+4. Verify API permissions
+5. Start with paper trading
+
+────────────────────────────────────────────────────────────────────────────
+
+✅ READY TO START
+────────────────────────────────────────────────────────────────────────────
+
+  $ python3 test_install.py    # Test installation
+  $ ./broke_bot_start.sh        # Run bot (paper trading)
+
+────────────────────────────────────────────────────────────────────────────
+
+Version: 1.0.0
+Created: 2025-12-15
+Educational use only - High risk trading strategy
+
+================================================================================

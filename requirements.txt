@@ -1,0 +1,14 @@
+# Broke Bot - Requirements
+# TRON Funding Rate Arbitrage Bot
+
+# HTTP & API Communication
+requests>=2.32.0
+
+# Numerical Computations (for indicators)
+numpy>=1.26.0
+
+# Optional: Configuration Management
+python-dotenv>=1.0.0
+
+# Optional: Enhanced Logging
+# rich>=13.9.0
